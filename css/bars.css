@@ -35,7 +35,13 @@
 }
 
 .main-bars {
-  margin-top: 100px;
+  margin-top:-50px;
   margin-left: 170px;
+}
+.first{
+  left:-30px;
+}
+.second{
+  left:30px;
 }
 /*# sourceMappingURL=bars.css.map *//*# sourceMappingURL=bars.css.map */

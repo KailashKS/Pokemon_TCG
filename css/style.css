@@ -1,15 +1,12 @@
-body{
-    background-color: #ef5350;
+
+.logo, .versus{
+  width:350px;
 }
-img{
-  /* height: 100%; */
-  width:400px;
-}
-.card {
+
+.battle-card {
     width: 320px;
     height: 446px;
-	top: 50px;
-    /* top: -100px; */
+    top: -100px;
     background-color: #211799;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,19 +21,19 @@ img{
     -webkit-animation: holoCard 15s ease infinite;
             animation: holoCard 15s ease infinite;
   }
-  .card:nth-of-type(1){
-    background-image: url(https://images.pokemontcg.io/xy2/12_hires.png);
-  }
-  .card:nth-of-type(2){
-    background-image: url(https://images.pokemontcg.io/ex6/112_hires.png);
-  }
-  .card > span {
-    position: relative;
-    top: 45%;
+  .battle-card:nth-of-type(1){
+    background-image: url(https://images.pokemontcg.io/xy1/79_hires.png);
+    /* background-image: url(https://images.pokemontcg.io/swsh35/27_hires.png); */
+    /* background-image: url(https://images.pokemontcg.io/xy2/12_hires.png); */
   }
   
-  .card:before,
-  .card:after {
+  .battle-card:nth-of-type(2){
+    background-image: url(https://images.pokemontcg.io/xy1/80_hires.png);
+    /* background-image: url(https://images.pokemontcg.io/ex6/112_hires.png); */
+  }
+
+  .battle-card:before,
+  .battle-card:after {
     content: "";
     position: absolute;
     left: 0;
@@ -50,11 +47,9 @@ img{
     mix-blend-mode: color-dodge;
     opacity: 0.2;
     z-index: 1;
-    -webkit-animation: holoGradient 15s ease infinite;
-            animation: holoGradient 15s ease infinite;
   }
   
-  .card:after {
+  .battle-card:after {
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
     background-position: center;
     background-size: 180%;
@@ -65,7 +60,7 @@ img{
             animation: holoSparkle 15s ease infinite;
   }
   
-  .card.active:before {
+  .battle-card.active:before {
     opacity: 1;
     -webkit-animation: none;
             animation: none;
@@ -73,12 +68,67 @@ img{
     background-image: linear-gradient(115deg, transparent 0%, transparent 25%, rgba(0, 231, 255, 0.7) 45%, rgba(255, 0, 231, 0.7) 55%, transparent 70%, transparent 100%);
   }
   
-  .card.active:before,
-  .card.active:after {
+  .battle-card.active:before,
+  .battle-card.active:after {
     -webkit-animation: none;
             animation: none;
   }
-  
+  .deck-card{
+    width: 125px;
+    height: 174px;
+    top: -100px;
+    background-color: #211799;
+    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-position: center; */
+    border-radius: 5px;
+    box-shadow: -3px -3px 3px 0 rgba(38, 230, 247, 0.3), 3px 3px 3px 0 rgba(247, 89, 228, 0.3), 0 0 6px 2px rgba(255, 231, 89, 0.3), 0 35px 25px -15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 15px;
+    transition:all .2s ease-in-out;
+  }
+  .deck-card:nth-of-type(1){
+    background-image: url(https://images.pokemontcg.io/xy1/35_hires.png);
+  }
+  .deck-card:nth-of-type(2){
+    background-image: url(https://images.pokemontcg.io/xy1/44_hires.png);
+  }
+  .deck-card:nth-of-type(3){
+    background-image: url(https://images.pokemontcg.io/xy2/12_hires.png);
+  }
+  .deck-card:nth-of-type(4){
+    background-image: url(https://images.pokemontcg.io/ex6/112_hires.png);
+    margin-right: 100px;
+  }
+  .deck-card:nth-of-type(5){
+    background-image: url(https://images.pokemontcg.io/xy0/14_hires.png);
+    
+  }
+  .deck-card:nth-of-type(6){
+    background-image: url(https://images.pokemontcg.io/xy0/6_hires.png);
+  }
+  .deck-card:nth-of-type(7){
+    background-image: url(https://images.pokemontcg.io/xy0/26_hires.png);
+  }
+  .deck-card:nth-of-type(8){
+    background-image: url(https://images.pokemontcg.io/swsh35/27_hires.png);
+  }
+  .deck-card:hover{
+    transform: scale(1.3);
+  }
+  body {
+    color: white;
+    background: #333844;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100%;
+    text-align: center;
+  }
+
   @-webkit-keyframes holoSparkle {
     0%, 5% {
       opacity: 0.1;
@@ -124,16 +174,6 @@ img{
       transform: rotateZ(3deg) rotateX(7deg) rotateY(-6deg);
     }
   }
-  body {
-    color: white;
-    background: #333844;
-    font-family: "Heebo", sans-serif;
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    height: 100%;
-    text-align: center;
-  }
-
-  
-  
+.main-container{
+  margin-top: 100px;
+}
