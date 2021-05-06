@@ -220,6 +220,9 @@
 	display: block;
 	-webkit-transition: opacity 75ms ease-out .1125s;
 	transition: opacity 75ms ease-out .1125s;
+	font-family: 'Press Start 2P', cursive;
+	font-size: .8em;
+	letter-spacing: .1em;
   }
   
   .retro-btn .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {

@@ -22,13 +22,13 @@
             animation: holoCard 15s ease infinite;
   }
   .battle-card:nth-of-type(1){
-    background-image: url(https://images.pokemontcg.io/xy1/79_hires.png);
+    background-image: url(../img/yveltal.png);
     /* background-image: url(https://images.pokemontcg.io/swsh35/27_hires.png); */
     /* background-image: url(https://images.pokemontcg.io/xy2/12_hires.png); */
   }
   
   .battle-card:nth-of-type(2){
-    background-image: url(https://images.pokemontcg.io/xy1/80_hires.png);
+    background-image: url(../img/skarmory.png);
     /* background-image: url(https://images.pokemontcg.io/ex6/112_hires.png); */
   }
 
@@ -91,30 +91,30 @@
     transition:all .2s ease-in-out;
   }
   .deck-card:nth-of-type(1){
-    background-image: url(https://images.pokemontcg.io/xy1/35_hires.png);
+    background-image: url(../img/dialga.png);
   }
   .deck-card:nth-of-type(2){
-    background-image: url(https://images.pokemontcg.io/xy1/44_hires.png);
+    background-image: url(../img/kingdra.png);
   }
   .deck-card:nth-of-type(3){
-    background-image: url(https://images.pokemontcg.io/xy2/12_hires.png);
+    background-image: url(../img/charizard.png);
   }
   .deck-card:nth-of-type(4){
-    background-image: url(https://images.pokemontcg.io/ex6/112_hires.png);
+    background-image: url(../img/venusaur.png);
     margin-right: 100px;
   }
   .deck-card:nth-of-type(5){
-    background-image: url(https://images.pokemontcg.io/xy0/14_hires.png);
+    background-image: url(../img/greninja.png);
     
   }
   .deck-card:nth-of-type(6){
-    background-image: url(https://images.pokemontcg.io/xy0/6_hires.png);
+    background-image: url(../img/reshiram.png);
   }
   .deck-card:nth-of-type(7){
-    background-image: url(https://images.pokemontcg.io/xy0/26_hires.png);
+    background-image: url(../img/snorlax.png);
   }
   .deck-card:nth-of-type(8){
-    background-image: url(https://images.pokemontcg.io/swsh35/27_hires.png);
+    background-image: url(../img/lucario.png);
   }
   .deck-card:hover{
     transform: scale(1.3);
