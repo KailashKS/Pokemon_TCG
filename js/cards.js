@@ -70,6 +70,6 @@ function switch_w_battle1(deck_card1, battle_card1, atk1, atk2){
   atk2.text(newlabels[1]);
   $(battle_card1).css('backgroundImage', currentdeckimage);
   $(deck_card1).css('backgroundImage', currentbattleimage);
-
-  console.log("Success")
+  console.log(battle_card1);
+  console.log("Success");
 }
