@@ -1,0 +1,139 @@
+body{
+    background-color: #ef5350;
+}
+img{
+  /* height: 100%; */
+  width:400px;
+}
+.card {
+    width: 320px;
+    height: 446px;
+	top: 50px;
+    /* top: -100px; */
+    background-color: #211799;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: -3px -3px 3px 0 rgba(38, 230, 247, 0.3), 3px 3px 3px 0 rgba(247, 89, 228, 0.3), 0 0 6px 2px rgba(255, 231, 89, 0.3), 0 35px 25px -15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 10px;
+    -webkit-animation: holoCard 15s ease infinite;
+            animation: holoCard 15s ease infinite;
+  }
+  .card:nth-of-type(1){
+    background-image: url(https://images.pokemontcg.io/xy2/12_hires.png);
+  }
+  .card:nth-of-type(2){
+    background-image: url(https://images.pokemontcg.io/ex6/112_hires.png);
+  }
+  .card > span {
+    position: relative;
+    top: 45%;
+  }
+  
+  .card:before,
+  .card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(115deg, transparent 0%, #00e7ff 30%, #ff00e7 70%, transparent 100%);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    mix-blend-mode: color-dodge;
+    opacity: 0.2;
+    z-index: 1;
+    -webkit-animation: holoGradient 15s ease infinite;
+            animation: holoGradient 15s ease infinite;
+  }
+  
+  .card:after {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+    background-position: center;
+    background-size: 180%;
+    mix-blend-mode: color-dodge;
+    opacity: 1;
+    z-index: 2;
+    -webkit-animation: holoSparkle 15s ease infinite;
+            animation: holoSparkle 15s ease infinite;
+  }
+  
+  .card.active:before {
+    opacity: 1;
+    -webkit-animation: none;
+            animation: none;
+    transition: none;
+    background-image: linear-gradient(115deg, transparent 0%, transparent 25%, rgba(0, 231, 255, 0.7) 45%, rgba(255, 0, 231, 0.7) 55%, transparent 70%, transparent 100%);
+  }
+  
+  .card.active:before,
+  .card.active:after {
+    -webkit-animation: none;
+            animation: none;
+  }
+  
+  @-webkit-keyframes holoSparkle {
+    0%, 5% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+  
+  @keyframes holoSparkle {
+    0%, 5% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+  @-webkit-keyframes holoCard {
+    0%, 100% {
+      transform: none;
+    }
+    25% {
+      transform: rotateZ(-3deg) rotateX(-7deg) rotateY(6deg);
+    }
+    66% {
+      transform: rotateZ(3deg) rotateX(7deg) rotateY(-6deg);
+    }
+  }
+  @keyframes holoCard {
+    0%, 100% {
+      transform: none;
+    }
+    25% {
+      transform: rotateZ(-3deg) rotateX(-7deg) rotateY(6deg);
+    }
+    66% {
+      transform: rotateZ(3deg) rotateX(7deg) rotateY(-6deg);
+    }
+  }
+  body {
+    color: white;
+    background: #333844;
+    font-family: "Heebo", sans-serif;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100%;
+    text-align: center;
+  }
+
+  
+  
