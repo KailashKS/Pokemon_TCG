@@ -30,13 +30,10 @@
   }
   .battle-card:nth-of-type(1){
     background-image: url(../img/yveltal.png);
-    /* background-image: url(https://images.pokemontcg.io/swsh35/27_hires.png); */
-    /* background-image: url(https://images.pokemontcg.io/xy2/12_hires.png); */
   }
   
   .battle-card:nth-of-type(2){
     background-image: url(../img/skarmory.png);
-    /* background-image: url(https://images.pokemontcg.io/ex6/112_hires.png); */
   }
 
   .battle-card:before,
