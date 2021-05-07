@@ -19,12 +19,14 @@
 			<embed src="/assets/battle_trainer.mp3" width="180" height="90" hidden="true" />
 		</audio> -->
 	<div>
+		
 		<img src="./img/logo.png" class="logo">
 		<br>
 		<div class="container-fluid main-container">
 			<div class="row">
 				<div class="battle-card battle1" id="battle1" data-id="yveltal"></div>
 				<img src="./img/versus.png" class="versus">
+				<button class="btn btn-primary chat-button btn-lg">Chat Box</button>
 				<div class="battle-card" id="battle2" data-id="skarmory">
 					<style class="hover"></style>
 				</div>
@@ -46,11 +48,15 @@
 		<div class="text-center main-bars">
 			<div class="row bars">
 				<div class="col-lg-7 first">
-					<div class="health-bar hb1" data-total="1000" data-value="1000">
+					<div class="health-bar hb1" data-total="170" data-value="170">
 						<div class="bar1">
 							<div class="hit1"></div>
 						</div>
+						
 					</div>
+					
+					<!-- <span class="hb1-label">Hello</span> -->
+					
 					<br>
 					<div class="energy-bar eb1" data-total="100" data-value="100">
 						<div class="bar2">
@@ -60,7 +66,7 @@
 				</div>
 
 				<div class="col-lg-5 second">
-					<div class="health-bar hb2" data-total="1000" data-value="1000">
+					<div class="health-bar hb2" data-total="170" data-value="170">
 						<div class="bar1">
 							<div class="hit1"></div>
 						</div>
@@ -144,9 +150,8 @@
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/cards.js"></script>
-	<script src="js/game.js"></script>
-	<script src="js/bars.js"></script>
+	<script src="js/buttons.js"></script>
+	<script src="js/game-logic.js"></script>
 </body>
 
 </html>

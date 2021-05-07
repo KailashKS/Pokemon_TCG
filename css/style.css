@@ -2,7 +2,14 @@
 .logo, .versus{
   width:350px;
 }
-
+.versus{
+  margin-top: -250px;
+}
+.chat-button{
+  position: absolute;
+  margin-left:-240px;
+  margin-top:225px
+}
 .battle-card {
     width: 320px;
     height: 446px;

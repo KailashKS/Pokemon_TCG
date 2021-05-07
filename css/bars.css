@@ -1,3 +1,7 @@
+/* .hb1-label{
+  position: absolute;
+  margin-top: -500px;
+} */
 .health-bar, .energy-bar {
   box-sizing: border-box;
   width: 300px;
@@ -44,4 +48,5 @@
 .second{
   left:30px;
 }
+
 /*# sourceMappingURL=bars.css.map *//*# sourceMappingURL=bars.css.map */
