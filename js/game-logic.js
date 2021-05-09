@@ -72,26 +72,26 @@ jQuery(document).ready(function () {
 	};
 
 	const moveColor = {
-		"Wing Attack": ["#A890F0", "#562dd1"],
-		"Combustion Blast": ["#E24242", "#7e1313"],
-		"Pollen Hazard": ["#7DB808", "#3e5b04"],
-		"Solarbeam": ["#7DB808", "#3e5b04"],
-		'Evil Ball': ['#2C2E2B', "#161615"],
-		'Y Cyclone': ['#2C2E2B', "#161615"],
-		'Joust': ['#8A776E', "#453b37"],
-		'Tailspin Piledriver': ['#8A776E', "#453b37"],
-		'Shred': ['#C6A114', "#63500a"],
-		'Timeless GX': ['#8A776E', "#453b37"],
-		'Hydro Pump': ['#6890F0', "#0f389c"],
-		'Reverse Thrust': ['#6890F0', "#0f389c"],
-		'Mat Block': ['#C03028', "#601814"],
-		'Aqua Edge': ['#6890F0', "#0f389c"],
-		'Scorching Column': ['#E24242', "#7e1313"],
-		'Vermilion GX': ['#E24242', "#7e1313"],
-		'Rock Smash': ['#C03028', "#601814"],
-		'Strength': ['#A8A878', "#575738"],
-		'Aura Sphere': ['#C03028', "#601814"],
-		'Beatdown Smash': ['#C03028', "#601814"]
+		"Wing Attack": ["#A890F0", "#562dd1", '#44328a'],
+		"Combustion Blast": ["#E24242", "#7e1313", '#58252b'],
+		"Pollen Hazard": ["#7DB808", "#3e5b04", '#384924'],
+		"Solarbeam": ["#7DB808", "#3e5b04", '#384924'],
+		'Evil Ball': ['#2C2E2B', "#161615", '#24272c'],
+		'Y Cyclone': ['#2C2E2B', "#161615", '#24272c'],
+		'Joust': ['#8A776E', "#453b37", '#3c393d'],
+		'Tailspin Piledriver': ['#8A776E', "#453b37", '#3c393d'],
+		'Shred': ['#C6A114', "#63500a", '#4b4427'],
+		'Timeless GX': ['#8A776E', "#453b37", '#3c393d'],
+		'Hydro Pump': ['#6890F0', "#0f389c", "#213870"],
+		'Reverse Thrust': ['#6890F0', "#0f389c", "#213870"],
+		'Mat Block': ['#C03028', "#601814", '#49282c'],
+		'Aqua Edge': ['#6890F0', "#0f389c", "#213870"],
+		'Scorching Column': ['#E24242', "#7e1313", '#58252b'],
+		'Vermilion GX': ['#E24242', "#7e1313", '#58252b'],
+		'Rock Smash': ['#C03028', "#601814", '#49282c'],
+		'Strength': ['#A8A878', "#575738", '#45473e'],
+		'Aura Sphere': ['#C03028', "#601814", '#49282c'],
+		'Beatdown Smash': ['#C03028', "#601814", '#49282c']
 	}
 
 	$("#atk-color1").css(
@@ -134,7 +134,7 @@ jQuery(document).ready(function () {
 		pokemon_name = $(document.getElementById('battle2')).data("id");
 		attack_hp(pokemon_name, $('.atk-name1').html(), hBar2, hit2, bar2);
 		setTimeout(function(){
-            document.body.style.backgroundColor='#8a3d43';
+            document.body.style.backgroundColor=moveColor[$(".atk-name1").text().trim()][2];
         }, 100);
         setTimeout(function(){
             document.body.style.backgroundColor='#333844';
@@ -144,16 +144,34 @@ jQuery(document).ready(function () {
 	hitBtn2.click(function () {
 		pokemon_name = $(document.getElementById('battle2')).data("id");
 		attack_hp(pokemon_name, $('.atk-name2').html(), hBar2, hit2, bar2);
+		setTimeout(function(){
+            document.body.style.backgroundColor=moveColor[$(".atk-name2").text().trim()][2];
+        }, 100);
+        setTimeout(function(){
+            document.body.style.backgroundColor='#333844';
+        }, 1200);
 	});
 
 	hitBtn3.click(function () {
 		pokemon_name = $(document.getElementById('battle1')).data("id");
 		attack_hp(pokemon_name, $('.atk-name3').html(), hBar1, hit1, bar1);
+		setTimeout(function(){
+            document.body.style.backgroundColor=moveColor[$(".atk-name3").text().trim()][2];
+        }, 100);
+        setTimeout(function(){
+            document.body.style.backgroundColor='#333844';
+        }, 1200);
 	});
 
 	hitBtn4.click(function () {
 		pokemon_name = $(document.getElementById('battle1')).data("id");
 		attack_hp(pokemon_name, $('.atk-name4').html(), hBar1, hit1, bar1);
+		setTimeout(function(){
+            document.body.style.backgroundColor=moveColor[$(".atk-name4").text().trim()][2];
+        }, 100);
+        setTimeout(function(){
+            document.body.style.backgroundColor='#333844';
+        }, 1200);
 	});
 
 	$('#deck1').click(function () {
