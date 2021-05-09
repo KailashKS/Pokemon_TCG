@@ -166,10 +166,12 @@ jQuery(document).ready(function() {
         var totalhp = pokemonHP[pokemon_name];
         var currenthp = currentPokemonHP[pokemon_name];
         var barWidth = (currenthp / totalhp) * 100;
+        bar.find('.hitbar-text').html(currenthp+ '/'+ totalhp);
         console.log(pokemon_name, currentPokemonHP, barWidth);
         bar.css('width', barWidth + "%");
     }
     function set_color_bar(bar, newValue, total){
+        console.log(bar.find('.hitbar-text').css('color'));
         if (newValue < 0.3*total) {
             bg = '#c54'
             bar.css('background', bg);
@@ -185,6 +187,10 @@ jQuery(document).ready(function() {
             value = hBar.data('value');
         var damage = moveDamage[attack_name.trim()];
         var newValue = value - damage;
+        if(newValue < 0){
+            newValue=0;
+            damage=value;
+        }
         set_hp(pokemon_name, newValue);
         var barWidth = (newValue / total) * 100;
         var hitWidth = (damage / value) * 100 + "%";
@@ -192,7 +198,7 @@ jQuery(document).ready(function() {
         // show hit bar and set the width
         hit.css('width', hitWidth);
         set_color_bar(bar, newValue, total);
-
+        bar.find('.hitbar-text').html(newValue+ '/'+ total);
 
         hBar.data('value', newValue);
 
