@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="icon" href="./assets/pokeballs.gif" type="image/gif" id="pokeballs">
+	<title>Pokemon TCG</title>
+	<link rel="stylesheet" href="css/cards.css">
+	<link rel="stylesheet" href="css/buttons.css">
+	<link rel="stylesheet" href="css/bars.css">
+</head>
+
+<body>
+	<!-- <audio src="/assets/battle_trainer.mp3" autoplay>
+			<embed src="/assets/battle_trainer.mp3" width="180" height="90" hidden="true" />
+		</audio> -->
+	<div>
+		
+		<img src="./img/logo.png" class="logo">
+		<br>
+		<div class="container-fluid main-container">
+			<div class="row">
+				<div class="battle-card battle1" id="battle1" data-id="yveltal"></div>
+				<img src="./img/versus.png" class="versus">
+				<button class="btn btn-primary chat-button btn-lg">Chat Box</button>
+				<div class="battle-card" id="battle2" data-id="skarmory">
+					<style class="hover"></style>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="row">
+			<div id="deck1" class="deck-card" data-id="dialga"></div>
+			<div id="deck2" class="deck-card" data-id="kingdra"></div>
+			<div id="deck3" class="deck-card" data-id="charizard"></div>
+			<div id="deck4" class="deck-card" data-id="venusaur"></div>
+
+			<div id="deck5" class="deck-card" data-id="greninja"></div>
+			<div id="deck6" class="deck-card" data-id="reshiram"></div>
+			<div id="deck7" class="deck-card" data-id="snorlax"></div>
+			<div id="deck8" class="deck-card" data-id="lucario"></div>
+		</div>
+
+		<div class="text-center main-bars">
+			<div class="row bars">
+				<div class="col-lg-7 first">
+					<div class="health-bar hb1" data-total="170" data-value="170">
+						<div class="bar1">
+							<div class="hit1"><span class="hitbar-text fixed">170/170</span></div>
+						</div>
+					</div>
+										
+					<br>
+					<div class="energy-bar eb1" data-total="100" data-value="100">
+						<div class="bar2">
+							<div class="hit2"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-5 second">
+					<div class="health-bar hb2" data-total="170" data-value="170">
+						<div class="bar1">
+							<div class="hit1"><span class="hitbar-text">170/170</span></div>
+						</div>
+					</div>
+					<br>
+					<div class="energy-bar eb2" data-total="100" data-value="100">
+						<div class="bar2">
+							<div class="hit2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class='wrapper'>
+				<div role='button' class='retro-btn atk1'>
+					<a class='btn'>
+						<span class='btn-inner'>
+							<span class='content-wrapper' id="color1">
+								<span class='btn-content' id="atk-color1">
+									<span class='btn-content-inner atk-name1'>Evil Ball
+									</span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<div class='wrapper'>
+				<div role='button' class='retro-btn atk2'>
+					<a class='btn'>
+						<span class='btn-inner'>
+							<span class='content-wrapper' id="color2">
+								<span class='btn-content' id="atk-color2">
+									<span class='btn-content-inner atk-name2'>Y Cyclone
+									</span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+
+
+			<div class='wrapper' style="margin-left: 260px;">
+				<div role='button' class='retro-btn atk3'>
+					<a class='btn'>
+						<span class='btn-inner'>
+							<span class='content-wrapper' id="color3">
+								<span class='btn-content' id="atk-color3">
+									<span class='btn-content-inner atk-name3'>Joust
+									</span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+			<div class='wrapper'>
+				<div role='button' class='retro-btn atk4'>
+					<a class='btn'>
+						<span class='btn-inner'>
+							<span class='content-wrapper' id="color4">
+								<span class='btn-content' id="atk-color4">
+									<span class='btn-content-inner atk-name4'>Tailspin Piledriver
+									</span>
+								</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/buttons.js"></script>
+	<script src="js/game-logic.js"></script>
+</body>
+
+</html>
