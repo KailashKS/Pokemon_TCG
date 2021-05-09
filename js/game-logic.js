@@ -194,7 +194,7 @@ jQuery(document).ready(function () {
 			}
 		}
 		else {
-			alert("Not your turn.")
+			alert("Cannot switch to this pokemon.")
 		}
 	});
 	$('#deck2').click(function () {
@@ -206,7 +206,7 @@ jQuery(document).ready(function () {
 			}
 		}
 		else {
-			alert("Not your turn.")
+			alert("Cannot switch to this pokemon.")
 		}
 
 	});
@@ -219,12 +219,11 @@ jQuery(document).ready(function () {
 			}
 		}
 		else {
-			alert("Not your turn.")
+			alert("Cannot switch to this pokemon.")
 		}
-
 	});
 	$('#deck4').click(function () {
-		if (turn % 2 == 1	) {
+		if (turn % 2 == 1) {
 			if (currentPokemonHP[$(this).data('id')] != 0) {
 				switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
 			} else {
@@ -232,37 +231,61 @@ jQuery(document).ready(function () {
 			}
 		}
 		else {
-			alert("Not your turn.")
+			alert("Cannot switch to this pokemon.")
 		}
 
 	});
 	$('#deck5').click(function () {
-		if (currentPokemonHP[$(this).data('id')] != 0) {
-			switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-		} else {
-			alert('Pokemon has no more HP');
+		if (turn % 2 == 0) {
+			if (currentPokemonHP[$(this).data('id')] != 0) {
+				switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
+			} else {
+				alert('Pokemon has no more HP');
+			}
 		}
+		else {
+			alert("Cannot switch to this pokemon.")
+		}
+
 	});
 	$('#deck6').click(function () {
-		if (currentPokemonHP[$(this).data('id')] != 0) {
-			switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-		} else {
-			alert('Pokemon has no more HP');
+		if (turn % 2 == 0) {
+			if (currentPokemonHP[$(this).data('id')] != 0) {
+				switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
+			} else {
+				alert('Pokemon has no more HP');
+			}
 		}
+		else {
+			alert("Cannot switch to this pokemon.")
+		}
+
 	});
 	$('#deck7').click(function () {
-		if (currentPokemonHP[$(this).data('id')] != 0) {
-			switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-		} else {
-			alert('Pokemon has no more HP');
+		if (turn % 2 == 0) {
+			if (currentPokemonHP[$(this).data('id')] != 0) {
+				switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
+			} else {
+				alert('Pokemon has no more HP');
+			}
 		}
+		else {
+			alert("Cannot switch to this pokemon.")
+		}
+
 	});
 	$('#deck8').click(function () {
-		if (currentPokemonHP[$(this).data('id')] != 0) {
-			switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-		} else {
-			alert('Pokemon has no more HP');
+		if (turn % 2 == 0) {
+			if (currentPokemonHP[$(this).data('id')] != 0) {
+				switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
+			} else {
+				alert('Pokemon has no more HP');
+			}
 		}
+		else {
+			alert("Cannot switch to this pokemon.")
+		}
+
 	});
 
 	function switch_w_battle1(deck_card1, battle_card1, atk1, atk2, hBar, bar) {
