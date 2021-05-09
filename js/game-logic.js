@@ -396,7 +396,7 @@ jQuery(document).ready(function () {
 				alert("Change Pokemon.")
 
 
-				if (pokemon_name == 'yvetal' || pokemon_name == 'dialga' ||
+				if (pokemon_name == 'yveltal' || pokemon_name == 'dialga' ||
 					pokemon_name == 'kingdra' || pokemon_name == 'charizard' || pokemon_name == 'venusaur') {
 					player1 += 1
 				}
@@ -408,16 +408,16 @@ jQuery(document).ready(function () {
 				if (player1 == 5) {
 					console.log("Hello.")
 					setTimeout(function () {
-						localStorage.setItem("name", "Player1");
+						localStorage.setItem("name", "Player2 wins");
 						window.location.href = "./winner.html";
-					})
+					}, 300)
 				}
 				else if (player2 == 5) {
 					console.log("Hello1.")
 					setTimeout(function () {
-						localStorage.setItem("name", "Player2");
+						localStorage.setItem("name", "Player1 wins");
 						window.location.href = "./winner.html";
-					})
+					}, 300)
 
 				}
 				$("#atk-btn1").prop("disabled", true)
