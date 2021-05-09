@@ -1,4 +1,5 @@
 jQuery(document).ready(function () {
+
 	var hitBtn1 = $('.atk1'),
 		hitBtn2 = $('.atk2'),
 		hitBtn3 = $('.atk3'),
@@ -11,6 +12,8 @@ jQuery(document).ready(function () {
 		hit2 = hBar2.find('.hit1'),
 		$cards = $(".battle-card"),
 		$style = $(".hover");
+
+	var turns = 0;
 
 	const attacks = {
 		'yveltal': ['Evil Ball', 'Y Cyclone'],
@@ -115,6 +118,13 @@ jQuery(document).ready(function () {
 	document.getElementById('color3').style.setProperty('--bgColor', moveColor[$(".atk-name3").text().trim()][1]);
 	document.getElementById('color4').style.setProperty('--bgColor', moveColor[$(".atk-name4").text().trim()][1]);
 
+	if (turns == 0) {
+		$("#atk-btn1").prop("disabled", false)
+		$("#atk-btn2").prop("disabled", false)
+		$("#atk-btn3").prop("disabled", true)
+		$("#atk-btn4").prop("disabled", true)
+		turns += 1
+	}
 	$cards.on("mousemove", function (e) {
 		var $card = $(this);
 		var l = e.offsetX;
@@ -133,45 +143,45 @@ jQuery(document).ready(function () {
 	hitBtn1.click(function () {
 		pokemon_name = $(document.getElementById('battle2')).data("id");
 		attack_hp(pokemon_name, $('.atk-name1').html(), hBar2, hit2, bar2);
-		setTimeout(function(){
-            document.body.style.backgroundColor=moveColor[$(".atk-name1").text().trim()][2];
-        }, 100);
-        setTimeout(function(){
-            document.body.style.backgroundColor='#333844';
-        }, 1200);
+		setTimeout(function () {
+			document.body.style.backgroundColor = moveColor[$(".atk-name1").text().trim()][2];
+		}, 100);
+		setTimeout(function () {
+			document.body.style.backgroundColor = '#333844';
+		}, 1200);
 	});
 
 	hitBtn2.click(function () {
 		pokemon_name = $(document.getElementById('battle2')).data("id");
 		attack_hp(pokemon_name, $('.atk-name2').html(), hBar2, hit2, bar2);
-		setTimeout(function(){
-            document.body.style.backgroundColor=moveColor[$(".atk-name2").text().trim()][2];
-        }, 100);
-        setTimeout(function(){
-            document.body.style.backgroundColor='#333844';
-        }, 1200);
+		setTimeout(function () {
+			document.body.style.backgroundColor = moveColor[$(".atk-name2").text().trim()][2];
+		}, 100);
+		setTimeout(function () {
+			document.body.style.backgroundColor = '#333844';
+		}, 1200);
 	});
 
 	hitBtn3.click(function () {
 		pokemon_name = $(document.getElementById('battle1')).data("id");
 		attack_hp(pokemon_name, $('.atk-name3').html(), hBar1, hit1, bar1);
-		setTimeout(function(){
-            document.body.style.backgroundColor=moveColor[$(".atk-name3").text().trim()][2];
-        }, 100);
-        setTimeout(function(){
-            document.body.style.backgroundColor='#333844';
-        }, 1200);
+		setTimeout(function () {
+			document.body.style.backgroundColor = moveColor[$(".atk-name3").text().trim()][2];
+		}, 100);
+		setTimeout(function () {
+			document.body.style.backgroundColor = '#333844';
+		}, 1200);
 	});
 
 	hitBtn4.click(function () {
 		pokemon_name = $(document.getElementById('battle1')).data("id");
 		attack_hp(pokemon_name, $('.atk-name4').html(), hBar1, hit1, bar1);
-		setTimeout(function(){
-            document.body.style.backgroundColor=moveColor[$(".atk-name4").text().trim()][2];
-        }, 100);
-        setTimeout(function(){
-            document.body.style.backgroundColor='#333844';
-        }, 1200);
+		setTimeout(function () {
+			document.body.style.backgroundColor = moveColor[$(".atk-name4").text().trim()][2];
+		}, 100);
+		setTimeout(function () {
+			document.body.style.backgroundColor = '#333844';
+		}, 1200);
 	});
 
 	$('#deck1').click(function () {
@@ -271,6 +281,21 @@ jQuery(document).ready(function () {
 		document.getElementById('color2').style.setProperty('--bgColor', moveColor[$(".atk-name2").text().trim()][1]);
 		document.getElementById('color3').style.setProperty('--bgColor', moveColor[$(".atk-name3").text().trim()][1]);
 		document.getElementById('color4').style.setProperty('--bgColor', moveColor[$(".atk-name4").text().trim()][1]);
+
+
+		if (turns % 2 == 0) {
+			$("#atk-btn1").prop("disabled", false)
+			$("#atk-btn2").prop("disabled", false)
+			$("#atk-btn3").prop("disabled", true)
+			$("#atk-btn4").prop("disabled", true)
+		} else {
+			$("#atk-btn1").prop("disabled", true)
+			$("#atk-btn2").prop("disabled", true)
+			$("#atk-btn3").prop("disabled", false)
+			$("#atk-btn4").prop("disabled", false)
+		}
+
+		turns = turns + 1;
 	}
 
 	function get_hp_bars(pokemon_name, bar) {
@@ -278,11 +303,9 @@ jQuery(document).ready(function () {
 		var currenthp = currentPokemonHP[pokemon_name];
 		var barWidth = (currenthp / totalhp) * 100;
 		bar.find('.hitbar-text').html(currenthp + '/' + totalhp);
-		console.log(pokemon_name, currentPokemonHP, barWidth);
 		bar.css('width', barWidth + "%");
 	}
 	function set_color_bar(bar, newValue, total) {
-		console.log(bar.find('.hitbar-text').css('color'));
 		if (newValue < 0.3 * total) {
 			bg = '#c54'
 			bar.css('background', bg);
@@ -293,6 +316,8 @@ jQuery(document).ready(function () {
 		}
 	}
 	function attack_hp(pokemon_name, attack_name, hBar, hit, bar) {
+
+
 
 		var total = hBar.data('total'),
 			value = hBar.data('value');
@@ -317,6 +342,30 @@ jQuery(document).ready(function () {
 			hit.css({ 'width': '0' });
 			bar.css('width', barWidth + "%");
 		}, 500);
+
+		setTimeout(function () {
+			if (hBar.data('value') == 0) {
+				alert("Change Pokemon.")
+				$("#atk-btn1").prop("disabled", true)
+				$("#atk-btn2").prop("disabled", true)
+				$("#atk-btn3").prop("disabled", true)
+				$("#atk-btn4").prop("disabled", true)
+			}
+		}, 1500)
+
+		if (turns % 2 == 0) {
+			$("#atk-btn1").prop("disabled", false)
+			$("#atk-btn2").prop("disabled", false)
+			$("#atk-btn3").prop("disabled", true)
+			$("#atk-btn4").prop("disabled", true)
+		} else {
+			$("#atk-btn1").prop("disabled", true)
+			$("#atk-btn2").prop("disabled", true)
+			$("#atk-btn3").prop("disabled", false)
+			$("#atk-btn4").prop("disabled", false)
+		}
+
+		turns = turns + 1;
 	}
 	function set_hp(pokemon_name, new_hp) {
 		currentPokemonHP[pokemon_name] = new_hp;

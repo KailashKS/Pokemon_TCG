@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+	box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);	
+}
+
 .hit1 span{
 	margin-left:-290px;
 	font-family: 'Press Start 2P';
@@ -54,6 +58,7 @@
 	outline-color: 0;
 	outline-style: none;
 	outline-width: 0;
+	
   }
   
   .retro-btn .btn:hover .btn-content-inner:before {
@@ -241,4 +246,8 @@
 	transition: opacity .3s ease-out, background-color .1125s ease-in;
 	opacity: 1;
 	z-index: -1;
+  }
+
+  .atk1, .atk2, .atk3, .atk4 {
+	  box-shadow: none;
   }
