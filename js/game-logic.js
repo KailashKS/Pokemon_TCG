@@ -14,6 +14,11 @@ jQuery(document).ready(function () {
 
 	var turn = 0;
 
+	var player1 = 0;
+	var player2 = 0;
+
+	// let checker = arr => arr.every(v => v === true);
+
 	const attacks = {
 		'yveltal': ['Evil Ball', 'Y Cyclone'],
 		'skarmory': ['Joust', 'Tailspin Piledriver'],
@@ -390,6 +395,32 @@ jQuery(document).ready(function () {
 		setTimeout(function () {
 			if (hBar.data('value') == 0) {
 				alert("Change Pokemon.")
+
+
+				if (pokemon_name == 'yvetal' || pokemon_name == 'dialga' ||
+					pokemon_name == 'kingdra' || pokemon_name == 'charizard' || pokemon_name == 'venusaur') {
+					player1 += 1
+				}
+				else if (pokemon_name == 'skarmory' || pokemon_name == 'greninja' ||
+					pokemon_name == 'reshiram' || pokemon_name == 'snorlax' || pokemon_name == 'lucario') {
+					player2 += 1
+				}
+
+				if (player1 == 5) {
+					console.log("Hello.")
+					setTimeout(function () {
+						localStorage.setItem("name", "Player1");
+						window.location.href = "./winner.html";
+					})
+				}
+				else if (player2 == 5) {
+					console.log("Hello1.")
+					setTimeout(function () {
+						localStorage.setItem("name", "Player2");
+						window.location.href = "./winner.html";
+					})
+
+				}
 				$("#atk-btn1").prop("disabled", true)
 				$("#atk-btn2").prop("disabled", true)
 				$("#atk-btn3").prop("disabled", true)
