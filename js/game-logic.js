@@ -48,6 +48,28 @@ jQuery(document).ready(function() {
         'snorlax': 120,
         'lucario': 210,
     }
+    const moveColor = {
+        "Wing Attack": ["#A890F0", "#3b16a9"],
+        "Combustion Blast": ["#E24242", "#7e1313", '#8a3d43'],
+        "Pollen Hazard": ["#7DB808", "#3e5b04"],
+        "Solarbeam": ["#7DB808", "#3e5b04"],
+        'Evil Ball': ['#2C2E2B', "#161615"],
+        'Y Cyclone': ['#2C2E2B', "#161615"],
+        'Joust': ['#8A776E', "#453b37"],
+        'Tailspin Piledriver': ['#8A776E', "#453b37"],
+        'Shred': ['#C6A114', "#63500a"],
+        'Timeless GX': ['#8A776E', "#453b37"],
+        'Hydro Pump': ['#6890F0', "#0f389c"],
+        'Reverse Thrust': ['#6890F0', "#0f389c"],
+        'Mat Block': ['#C03028', "#601814"],
+        'Aqua Edge': ['#6890F0', "#0f389c"],
+        'Scorching Column': ['#E24242', "#7e1313"],
+        'Vermilion GX': ['#E24242', "#7e1313"],
+        'Rock Smash': ['#C03028', "#601814"],
+        'Strength': ['#A8A878', "#575738"],
+        'Aura Sphere': ['#C03028', "#601814"],
+        'Beatdown Smash': ['#C03028', "#601814"]
+      }
     const moveDamage = {
         "Wing Attack": "60",
         "Combustion Blast": "150",
@@ -89,6 +111,12 @@ jQuery(document).ready(function() {
     hitBtn1.click(function() {
         pokemon_name=$(document.getElementById('battle2')).data("id");
         attack_hp(pokemon_name,$('.atk-name1').html(), hBar2, hit2, bar2);
+        setTimeout(function(){
+            document.body.style.backgroundColor='#8a3d43';
+        }, 100);
+        setTimeout(function(){
+            document.body.style.backgroundColor='#333844';
+        }, 1200);
     });
 
     hitBtn2.click(function() {
@@ -162,7 +190,7 @@ jQuery(document).ready(function() {
             alert('Pokemon has no more HP');
         }
     });
-
+    
     function switch_w_battle1(deck_card1, battle_card1, atk1, atk2, hBar, bar) {
         const currentbattleimage = $(battle_card1).css('backgroundImage'); //getting current battle image
         const currentdeckimage = $(deck_card1).css('backgroundImage'); //getting the deck card img to switch with
