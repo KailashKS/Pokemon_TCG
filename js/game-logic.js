@@ -139,7 +139,8 @@ jQuery(document).ready(function () {
 		$card.addClass("active");
 		$style.html(style);
 	}).on("mouseout", function () { $cards.removeClass("active"); });
-
+	// player1_vals=currentPokemonHP[$('#deck1').data('id')]+currentPokemonHP[$('#deck2').data('id')]+currentPokemonHP[$('#deck3').data('id')]+currentPokemonHP[$('#deck4').data('id')]+currentPokemonHP[$('#battle1').data('id')]
+	// player2_vals=currentPokemonHP[$('#deck5').data('id')]+currentPokemonHP[$('#deck6').data('id')]+currentPokemonHP[$('#deck7').data('id')]+currentPokemonHP[$('#deck8').data('id')]+currentPokemonHP[$('#battle2').data('id')]
 	hitBtn1.click(function () {
 		pokemon_name = $(document.getElementById('battle2')).data("id");
 		attack_hp(pokemon_name, $('.atk-name1').html(), hBar2, hit2, bar2);
@@ -395,13 +396,17 @@ jQuery(document).ready(function () {
 				$("#atk-btn4").prop("disabled", true)
 			}
 		}, 1500)
-
+		// player1_vals=currentPokemonHP[$('#deck1').data('id')]+currentPokemonHP[$('#deck2').data('id')]+currentPokemonHP[$('#deck3').data('id')]+currentPokemonHP[$('#deck4').data('id')]+currentPokemonHP[$('#battle1').data('id')]
+		// player2_vals=currentPokemonHP[$('#deck5').data('id')]+currentPokemonHP[$('#deck6').data('id')]+currentPokemonHP[$('#deck7').data('id')]+currentPokemonHP[$('#deck8').data('id')]+currentPokemonHP[$('#battle2').data('id')]
+		
 		if (turn % 2 == 0) {
+			// alert('player2');
 			$("#atk-btn1").prop("disabled", false)
 			$("#atk-btn2").prop("disabled", false)
 			$("#atk-btn3").prop("disabled", true)
 			$("#atk-btn4").prop("disabled", true)
 		} else {
+			// alert('player1')
 			$("#atk-btn1").prop("disabled", true)
 			$("#atk-btn2").prop("disabled", true)
 			$("#atk-btn3").prop("disabled", false)
