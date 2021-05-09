@@ -107,37 +107,60 @@ jQuery(document).ready(function() {
     });
 
     $('#deck1').click(function() {
-        
-        switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1)
-        const currentdeckid = $(this).data("id");
-    });
-    $('#deck2').click(function() {
+        if (currentPokemonHP[$(this).data('id')]!=0){
         switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
-        const currentdeckid = $(this).data("id");
+    }else{
+        alert('Pokemon has no more HP');
+    }
+});
+    $('#deck2').click(function() {
+        if (currentPokemonHP[$(this).data('id')]!=0){
+            switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
+        }else{
+            alert('Pokemon has no more HP');
+        }
     });
     $('#deck3').click(function() {
-        switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
-        const currentdeckid = $(this).data("id");
+        if (currentPokemonHP[$(this).data('id')]!=0){
+            switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
+        }else{
+            alert('Pokemon has no more HP');
+        }
     });
     $('#deck4').click(function() {
-        switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
-        const currentdeckid = $(this).data("id");
+        if (currentPokemonHP[$(this).data('id')]!=0){
+            switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
+        }else{
+            alert('Pokemon has no more HP');
+        }
     });
     $('#deck5').click(function() {
+        if (currentPokemonHP[$(this).data('id')]!=0){
         switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-        const currentdeckid = $(this).data("id");
-    });
+    }else{
+        alert('Pokemon has no more HP');
+    }
+});
     $('#deck6').click(function() {
-        switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-        const currentdeckid = $(this).data("id");
+        if (currentPokemonHP[$(this).data('id')]!=0){
+            switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
+        }else{
+            alert('Pokemon has no more HP');
+        }
     });
     $('#deck7').click(function() {
-        switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-        const currentdeckid = $(this).data("id");
+        if (currentPokemonHP[$(this).data('id')]!=0){
+            switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
+        }else{
+            alert('Pokemon has no more HP');
+        }
     });
     $('#deck8').click(function() {
-        switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
-        const currentdeckid = $(this).data("id");
+        if (currentPokemonHP[$(this).data('id')]!=0){
+            switch_w_battle1(this, document.getElementById('battle2'), $('.atk-name3'), $('.atk-name4'), hBar2, bar2);
+        }else{
+            alert('Pokemon has no more HP');
+        }
     });
 
     function switch_w_battle1(deck_card1, battle_card1, atk1, atk2, hBar, bar) {
