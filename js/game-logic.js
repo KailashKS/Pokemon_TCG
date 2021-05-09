@@ -72,7 +72,7 @@ jQuery(document).ready(function () {
 	};
 
 	const moveColor = {
-		"Wing Attack": ["#A890F0", "#3b16a9"],
+		"Wing Attack": ["#A890F0", "#562dd1"],
 		"Combustion Blast": ["#E24242", "#7e1313"],
 		"Pollen Hazard": ["#7DB808", "#3e5b04"],
 		"Solarbeam": ["#7DB808", "#3e5b04"],
