@@ -12,7 +12,7 @@ jQuery(document).ready(function () {
 		$cards = $(".battle-card"),
 		$style = $(".hover");
 
-	var turns = 0;
+	var turn = 0;
 
 	const attacks = {
 		'yveltal': ['Evil Ball', 'Y Cyclone'],
@@ -117,13 +117,14 @@ jQuery(document).ready(function () {
 	document.getElementById('color3').style.setProperty('--bgColor', moveColor[$(".atk-name3").text().trim()][1]);
 	document.getElementById('color4').style.setProperty('--bgColor', moveColor[$(".atk-name4").text().trim()][1]);
 
-	if (turns == 0) {
+	if (turn == 0) {
 		$("#atk-btn1").prop("disabled", false)
 		$("#atk-btn2").prop("disabled", false)
 		$("#atk-btn3").prop("disabled", true)
 		$("#atk-btn4").prop("disabled", true)
-		turns += 1
+		turn += 1
 	}
+
 	$cards.on("mousemove", function (e) {
 		var $card = $(this);
 		var l = e.offsetX;
@@ -184,7 +185,7 @@ jQuery(document).ready(function () {
 	});
 
 	$('#deck1').click(function () {
-		if (turn % 2 == 0) {
+		if (turn % 2 == 1) {
 			if (currentPokemonHP[$(this).data('id')] != 0) {
 				switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
 			}
@@ -192,45 +193,45 @@ jQuery(document).ready(function () {
 				alert('Pokemon has no more HP');
 			}
 		}
-		else if (turn % 2 != 0) {
+		else {
 			alert("Not your turn.")
 		}
 	});
 	$('#deck2').click(function () {
-		if (turn % 2 == 0) {
+		if (turn % 2 == 1) {
 			if (currentPokemonHP[$(this).data('id')] != 0) {
 				switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
 			} else {
 				alert('Pokemon has no more HP');
 			}
 		}
-		else if (turn % 2 != 0) {
+		else {
 			alert("Not your turn.")
 		}
 
 	});
 	$('#deck3').click(function () {
-		if (turn % 2 == 0) {
+		if (turn % 2 == 1) {
 			if (currentPokemonHP[$(this).data('id')] != 0) {
 				switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
 			} else {
 				alert('Pokemon has no more HP');
 			}
 		}
-		else if (turn % 2 != 0) {
+		else {
 			alert("Not your turn.")
 		}
 
 	});
 	$('#deck4').click(function () {
-		if (turn % 2 == 0) {
+		if (turn % 2 == 1	) {
 			if (currentPokemonHP[$(this).data('id')] != 0) {
 				switch_w_battle1(this, document.getElementById('battle1'), $('.atk-name1'), $('.atk-name2'), hBar1, bar1);
 			} else {
 				alert('Pokemon has no more HP');
 			}
 		}
-		else if (turn % 2 != 0) {
+		else {
 			alert("Not your turn.")
 		}
 
@@ -305,7 +306,7 @@ jQuery(document).ready(function () {
 		document.getElementById('color3').style.setProperty('--bgColor', moveColor[$(".atk-name3").text().trim()][1]);
 		document.getElementById('color4').style.setProperty('--bgColor', moveColor[$(".atk-name4").text().trim()][1]);
 
-		if (turns % 2 == 0) {
+		if (turn % 2 == 0) {
 			$("#atk-btn1").prop("disabled", false)
 			$("#atk-btn2").prop("disabled", false)
 			$("#atk-btn3").prop("disabled", true)
@@ -317,7 +318,7 @@ jQuery(document).ready(function () {
 			$("#atk-btn4").prop("disabled", false)
 		}
 
-		turns = turns + 1;
+		turn = turn + 1;
 	}
 
 	function get_hp_bars(pokemon_name, bar) {
@@ -372,7 +373,7 @@ jQuery(document).ready(function () {
 			}
 		}, 1500)
 
-		if (turns % 2 == 0) {
+		if (turn % 2 == 0) {
 			$("#atk-btn1").prop("disabled", false)
 			$("#atk-btn2").prop("disabled", false)
 			$("#atk-btn3").prop("disabled", true)
@@ -384,7 +385,7 @@ jQuery(document).ready(function () {
 			$("#atk-btn4").prop("disabled", false)
 		}
 
-		turns = turns + 1;
+		turn = turn + 1;
 	}
 	function set_hp(pokemon_name, new_hp) {
 		currentPokemonHP[pokemon_name] = new_hp;
